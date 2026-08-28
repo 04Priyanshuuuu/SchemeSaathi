@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import "./AuthPage.css";
+import "./Auth.css";
 
 // ---- Config ----------------------------------------------------------
 // Point this at your backend. Kept as a constant so it's a one-line change
@@ -159,7 +159,7 @@ function BrandPanel() {
 
 // ---- Main page -----------------------------------------------------------
 
-export default function AuthPage() {
+export default function Auth() {
   // Sign-up state
   const [signup, setSignup] = useState({ name: "", email: "", password: "", confirmPassword: "" });
   const [signupError, setSignupError] = useState("");
