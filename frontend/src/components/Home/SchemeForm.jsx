@@ -5,7 +5,7 @@ import "./SchemeForm.css";
 
 function SectionDivider({ label }) {
   return (
-    <div className="section-divider">
+    <div className="scheme-divider">
       <span>{label}</span>
     </div>
   );
@@ -115,7 +115,7 @@ export default function SchemeForm() {
   };
 
   return (
-    <section className="scheme-form-section">
+    <section className="scheme-form-section" id="scheme-form">
       <div className="scheme-form-header">
         <h2>What kind of scheme are you looking for?</h2>
         <p>Fill out the form to get personalised scheme recommendation</p>

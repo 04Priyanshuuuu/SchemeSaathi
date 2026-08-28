@@ -1,0 +1,126 @@
+/* ============================================================
+   YojnaSetu / SchemeSaathi — EMI Calculator Styles
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+.emi-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* navy at the top (behind the heading), fading to white lower down —
+     same treatment as the scheme form section for visual consistency */
+  background: linear-gradient(180deg, #091928 0%, #091928 30%, #ffffff 100%);
+  padding: 48px 24px 56px;
+}
+
+.emi-section__title {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0 0 24px;
+}
+
+/* ---------- Card ---------- */
+
+.emi-card {
+  width: 100%;
+  max-width: 560px;
+  background-color: #e6f2c2;
+  border-radius: 16px;
+  padding: 32px 36px 36px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Fields (shared naming with SchemeForm for consistency) ---------- */
+
+.emi-field-wrap {
+  margin-bottom: 14px;
+}
+
+.emi-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.emi-field label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #091928;
+  flex-shrink: 0;
+  min-width: 150px;
+}
+
+.emi-field__input {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid rgba(9, 25, 40, 0.3);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #091928;
+  outline: none;
+}
+
+.emi-field__input:focus {
+  border-color: #091928;
+  box-shadow: 0 0 0 2px rgba(9, 25, 40, 0.15);
+}
+
+.emi-field-error {
+  font-size: 11px;
+  color: #b3261e;
+  margin: 4px 0 0;
+  text-align: right;
+}
+
+/* ---------- Calculate button ---------- */
+
+.emi-card__calculate {
+  align-self: center;
+  margin-top: 16px;
+  background-color: #091928;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 40px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.emi-card__calculate:hover {
+  filter: brightness(1.2);
+}
+
+.emi-result {
+  align-self: center;
+  margin: 16px 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #091928;
+}
+
+/* ---------- Footer note ---------- */
+
+.emi-section__note {
+  margin-top: 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #091928;
+  text-align: center;
+}
+
+.emi-section__link {
+  color: #7a9e1f;
+  text-decoration: underline;
+}
+
+.emi-section__link:hover {
+  color: #091928;
+}
