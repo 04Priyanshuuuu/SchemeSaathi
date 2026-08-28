@@ -1,5 +1,4 @@
 import React from "react";
-import { ShieldCheck, FileText, MapPin, ClipboardEdit, ArrowRight } from "lucide-react";
 import "./HomePage.css";
 
 // ---- Navbar ---------------------------------------------------------
@@ -55,49 +54,20 @@ function Hero() {
   );
 }
 
-// ---- Process strip -----------------------------------------------------
-// The 4-step journey strip below the hero. Icons are built with
-// lucide-react rather than image files — swap for <img> tags if you'd
-// rather use your own icon assets here too.
+// ---- Process flowchart --------------------------------------------------
+// This whole 8-step journey graphic (Eligibility → Scheme Match →
+// Partner Match → Submission → Scrutiny → Sanction → Reimbursement →
+// Repayment) is one exported image, not built from individual icons.
+// Swap the src below for your actual filename.
 
-const STEPS = [
-  {
-    icon: ShieldCheck,
-    caption: "Check eligibility — income within the prescribed limit",
-  },
-  {
-    icon: FileText,
-    caption: "Pick the scheme type — Micro Finance, Term Loan, or Education",
-  },
-  {
-    icon: MapPin,
-    caption: "Locate the SCA, PSB, RRB or NBFC-MFI that handles that scheme",
-  },
-  {
-    icon: ClipboardEdit,
-    caption: "Visit the district office — form, caste certificate, income proof",
-  },
-];
-
-function ProcessStrip() {
+function ProcessFlowchart() {
   return (
-    <section className="process-strip">
-      {STEPS.map((step, i) => {
-        const Icon = step.icon;
-        return (
-          <React.Fragment key={i}>
-            <div className="process-step">
-              <div className="process-step__icon">
-                <Icon size={26} strokeWidth={2} />
-              </div>
-              <p className="process-step__caption">{step.caption}</p>
-            </div>
-            {i < STEPS.length - 1 && (
-              <ArrowRight className="process-step__arrow" size={22} strokeWidth={2.5} />
-            )}
-          </React.Fragment>
-        );
-      })}
+    <section className="process-flowchart">
+      <img
+        src="/Flowchart-YojnaSetu.png"
+        alt="Step-by-step process to avail a financial scheme: eligibility check, scheme match, partner match, submission, scrutiny, sanction, reimbursement, and repayment"
+        className="process-flowchart__image"
+      />
     </section>
   );
 }
@@ -109,7 +79,7 @@ export default function HomePage() {
     <div className="home-page">
       <Navbar />
       <Hero />
-      <ProcessStrip />
+      <ProcessFlowchart />
     </div>
   );
 }
