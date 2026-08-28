@@ -1,5 +1,6 @@
 import React from "react";
-import SchemeForm from "./SchemeForm";
+import SchemeForm from "./SchemeForm"; // adjust path to wherever you place the file
+import EMICalculator from "./EMIcalculator"; // adjust path to wherever you place the file
 import "./HomePage.css";
 
 // ---- Navbar ---------------------------------------------------------
@@ -82,6 +83,7 @@ export default function HomePage() {
       <Hero />
       <ProcessFlowchart />
       <SchemeForm />
+      <EMICalculator />
     </div>
   );
 }
