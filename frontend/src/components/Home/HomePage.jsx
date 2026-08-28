@@ -1,4 +1,5 @@
 import React from "react";
+import SchemeForm from "./SchemeForm";
 import "./HomePage.css";
 
 // ---- Navbar ---------------------------------------------------------
@@ -64,7 +65,7 @@ function ProcessFlowchart() {
   return (
     <section className="process-flowchart">
       <img
-        src="/Flowchart-YojnaSetu.png"
+        src="/process-flowchart.png"
         alt="Step-by-step process to avail a financial scheme: eligibility check, scheme match, partner match, submission, scrutiny, sanction, reimbursement, and repayment"
         className="process-flowchart__image"
       />
@@ -80,6 +81,7 @@ export default function HomePage() {
       <Navbar />
       <Hero />
       <ProcessFlowchart />
+      <SchemeForm />
     </div>
   );
 }
