@@ -1,0 +1,309 @@
+/* ============================================================
+   YojnaSetu / SchemeSaathi — Auth Page Styles
+   Brand colors used throughout:
+   - Navy (primary dark)   : #091928
+   - Lime (accent)         : #c8f229
+   - Mint (panel bg)       : #eef2e3
+   - White                 : #ffffff
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+.auth-page {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* ---------- Left brand panel ---------- */
+
+.brand-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 28px;
+  width: 50%;
+  overflow: hidden;
+  background-color: #091928; /* fallback color while the image loads / if it's missing */
+  /* Put your real asset in /public (e.g. public/brand-bg.jpg) and update
+     this path — for a Vite project, anything in /public is served from
+     the site root, so "/brand-bg.jpg" resolves to public/brand-bg.jpg */
+  background-image: url("/brand-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  padding: 40px;
+}
+
+/* Optional dark overlay so heading text stays readable regardless of
+   what's in the background image. Delete this rule (and the div it
+   targets, if you add one) if your image is already dark/high-contrast
+   enough on its own. */
+.brand-panel__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(9, 25, 40, 0.35);
+  z-index: 0;
+}
+
+.brand-panel__content {
+  position: relative;
+  z-index: 1;
+}
+
+.brand-panel__heading {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+  text-align: left;
+  /* Off-white rather than pure #ffffff — closer to the screenshot's tone.
+     Send the exact hex from Figma's Inspect panel and I'll swap this in. */
+  color: #f4f6ef;
+}
+
+.brand-panel__heading-accent {
+  color: #c8f229;
+}
+
+/* ---------- Arrow graphic + badge ---------- */
+
+.brand-panel__arrow-block {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 200px;
+}
+
+.brand-panel__arrow {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* drop-shadow follows the arrow's actual silhouette (unlike box-shadow,
+     which would just shadow the invisible rectangular SVG container) */
+  filter: drop-shadow(4px 6px 8px rgba(0, 0, 0, 0.45));
+}
+
+.brand-panel__arrow-text {
+  font-size: 11px;
+  font-weight: 700;
+  fill: #091928;
+}
+
+/* ---------- Right form panel ---------- */
+
+.form-panel {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: #eef2e3;
+  padding: 40px 24px;
+}
+
+.form-panel__inner {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #091928;
+  margin: 0;
+}
+
+.form-subtitle {
+  font-size: 12px;
+  color: rgba(9, 25, 40, 0.6);
+  margin: 4px 0 0;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #091928;
+  margin: 0;
+}
+
+/* ---------- Google button ---------- */
+
+.google-button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #ffffff;
+  border: 1px solid rgba(9, 25, 40, 0.15);
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #091928;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.google-button:hover {
+  background-color: rgba(9, 25, 40, 0.05);
+}
+
+/* ---------- Divider ---------- */
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: rgba(9, 25, 40, 0.4);
+}
+
+.divider__line {
+  height: 1px;
+  flex: 1;
+  background-color: rgba(9, 25, 40, 0.15);
+}
+
+/* ---------- Inputs ---------- */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  border: 1px solid rgba(9, 25, 40, 0.15);
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input-wrapper:focus-within {
+  border-color: #c8f229;
+  box-shadow: 0 0 0 3px rgba(200, 242, 41, 0.35);
+}
+
+.input-icon {
+  width: 16px;
+  height: 16px;
+  color: rgba(9, 25, 40, 0.5);
+  flex-shrink: 0;
+}
+
+.input-field {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #091928;
+}
+
+.input-field::placeholder {
+  color: rgba(9, 25, 40, 0.4);
+}
+
+/* ---------- Password show/hide toggle ---------- */
+
+.eye-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: rgba(9, 25, 40, 0.45);
+  flex-shrink: 0;
+}
+
+.eye-toggle:hover {
+  color: rgba(9, 25, 40, 0.8);
+}
+
+/* ---------- Buttons ---------- */
+
+.primary-button {
+  width: 100%;
+  background-color: #c8f229;
+  color: #091928;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.primary-button:hover:not(:disabled) {
+  filter: brightness(0.95);
+}
+
+.primary-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------- Checkbox / terms ---------- */
+
+.terms-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(9, 25, 40, 0.7);
+}
+
+.terms-row input[type="checkbox"] {
+  margin-top: 2px;
+  accent-color: #c8f229;
+}
+
+/* ---------- Error text ---------- */
+
+.error-text {
+  font-size: 12px;
+  color: #dc2626;
+  margin: -4px 0 0;
+}
+
+/* ---------- Section divider between signup and login ---------- */
+
+.section-divider {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(9, 25, 40, 0.1);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+  .brand-panel {
+    display: none;
+  }
+  .form-panel {
+    width: 100%;
+  }
+}
