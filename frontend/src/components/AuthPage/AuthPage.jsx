@@ -1,10 +1,30 @@
-import React, { useState, useCallback } from "react";
-import "./Auth.css";
+import React, { useState, useCallback, useEffect } from "react";
+import "./AuthPage.css";
 
 // ---- Config ----------------------------------------------------------
 // Point this at your backend. Kept as a constant so it's a one-line change
 // when you move from localhost to a deployed API (Render, etc).
 const API_BASE = "http://localhost:5000/api";
+
+const parseAuthCallback = () => {
+  const hash = window.location.hash || "";
+  const rawQuery = hash.includes("?")
+    ? hash.slice(hash.indexOf("?") + 1)
+    : window.location.search.slice(1);
+
+  const params = new URLSearchParams(rawQuery);
+  const token = params.get("token");
+  const encodedUser = params.get("user");
+
+  if (!token) return null;
+
+  try {
+    const user = encodedUser ? JSON.parse(decodeURIComponent(encodedUser)) : null;
+    return { token, user };
+  } catch {
+    return { token, user: null };
+  }
+};
 
 // ---- Icon paths (kept separate so the JSX below stays readable) ------
 const ICONS = {
@@ -162,6 +182,21 @@ function BrandPanel() {
 // ---- Main page -----------------------------------------------------------
 
 export default function Auth() {
+  useEffect(() => {
+    const authResult = parseAuthCallback();
+
+    if (!authResult?.token) return;
+
+    localStorage.setItem("token", authResult.token);
+    if (authResult.user) {
+      localStorage.setItem("user", JSON.stringify(authResult.user));
+    }
+
+    const nextUrl = window.location.pathname.includes("/auth") ? "/dashboard" : "/dashboard";
+    window.history.replaceState({}, "", "/#/auth");
+    window.location.href = nextUrl;
+  }, []);
+
   // Sign-up state
   const [signup, setSignup] = useState({ name: "", email: "", password: "", confirmPassword: "" });
   const [signupError, setSignupError] = useState("");

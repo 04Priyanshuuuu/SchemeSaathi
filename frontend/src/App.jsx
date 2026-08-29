@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 
 import LandingPage from "./components/LandingPage/LandingPage";
@@ -14,16 +13,10 @@ import ContactUs from "./components/ContactUs/ContactUs";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 
 import "./App.css";
-=======
-import Auth from './components/Auth/Auth'
-import HomePage from './components/Home/HomePage'
-import './App.css'
->>>>>>> 99cca17b5bbc610b81f1ee85a8cb13214361d2cd
 
 function App() {
   const [route, setRoute] = useState(window.location.hash || "#/");
 
-<<<<<<< HEAD
   useEffect(() => {
     const handleHashChange = () => setRoute(window.location.hash || "#/");
     window.addEventListener("hashchange", handleHashChange);
@@ -68,14 +61,6 @@ function App() {
     default:
       return <LandingPage />;
   }
-=======
-  return (
-    <>
-      <HomePage />
-      <Auth />
-    </>
-  )
->>>>>>> 99cca17b5bbc610b81f1ee85a8cb13214361d2cd
 }
 
 export default App;
