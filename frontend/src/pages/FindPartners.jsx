@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function FindPartners() {
@@ -8,6 +9,8 @@ export default function FindPartners() {
 
   return (
     <main className="min-h-screen w-full bg-[#091928] font-['Inter','Segoe_UI',Roboto,Helvetica,Arial,sans-serif] text-[#091928]">
+      <Navbar />
+
       {/* ================= PARTNER SECTION ================= */}
       <section
         className="

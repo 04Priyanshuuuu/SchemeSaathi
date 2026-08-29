@@ -1,4 +1,6 @@
 import React from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function PrivacyPolicy() {
   const go = (path) => {
@@ -7,62 +9,7 @@ export default function PrivacyPolicy() {
 
   return (
     <div className="min-h-screen bg-[#eef2e3] text-[#091928]">
-      {/* ================= NAVBAR ================= */}
-
-      <header
-        className="
-          h-[75px]
-          px-[7%]
-          bg-[#091928]
-          text-white
-          flex
-          items-center
-          justify-between
-        "
-      >
-        <div
-          onClick={() => go("/")}
-          className="
-            font-extrabold
-            cursor-pointer
-            flex
-            items-center
-          "
-        >
-          <b
-            className="
-              text-[#b9e92f]
-              border-2
-              border-[#b9e92f]
-              px-[9px]
-              py-[5px]
-              rounded-lg
-              mr-2
-            "
-          >
-            ✓
-          </b>
-          YojnaSetu
-        </div>
-
-        <button
-          onClick={() => go("/home")}
-          className="
-            border-0
-            bg-[#b9e92f]
-            text-[#091928]
-            px-5
-            py-[10px]
-            rounded-[22px]
-            font-bold
-            cursor-pointer
-            hover:brightness-95
-            transition
-          "
-        >
-          Home
-        </button>
-      </header>
+      <Navbar />
 
       {/* ================= MAIN ================= */}
 
@@ -257,6 +204,7 @@ export default function PrivacyPolicy() {
           </section>
         </article>
       </main>
+      <Footer />
     </div>
   );
 }

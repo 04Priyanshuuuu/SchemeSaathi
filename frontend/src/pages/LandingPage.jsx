@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function LandingPage() {
   const [language, setLanguage] = useState("EN");
@@ -401,48 +402,7 @@ export default function LandingPage() {
           FOOTER
       ===================================================== */}
 
-      <footer className="bg-[#061522]">
-        <div className="max-w-6xl mx-auto px-6 py-12">
-          <div className="grid md:grid-cols-2 gap-10">
-            <div>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl border-2 border-[#B9E92F] flex items-center justify-center">
-                  <span className="text-[#B9E92F] font-bold">YS</span>
-                </div>
-
-                <span className="text-2xl font-bold">YojnaSetu</span>
-              </div>
-
-              <p className="text-gray-400 text-sm max-w-md mt-5 leading-relaxed">
-                Designed to make financial assistance easier to discover,
-                understand and access.
-              </p>
-            </div>
-
-            <div className="md:text-right">
-              <h3 className="text-xl font-semibold">Contact Info</h3>
-
-              <div className="w-40 h-px bg-white/70 md:ml-auto mt-3 mb-5" />
-
-              <p className="text-gray-300 text-sm">☎ 1800-11-2026</p>
-
-              <p className="text-gray-300 text-sm mt-3">
-                ✉ support@yojnasetu.gov.in
-              </p>
-
-              <p className="text-gray-300 text-sm mt-3">
-                Ministry of Social Justice & Empowerment, New Delhi, India
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="border-t border-white/60 py-4 text-center">
-          <p className="text-gray-400 text-xs">
-            © Copyright - YojnaSetu 2026. All Rights Reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

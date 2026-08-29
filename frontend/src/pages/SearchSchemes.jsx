@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const schemes = [
   {
@@ -48,145 +50,7 @@ export default function SearchSchemes() {
         text-[#091928]
       "
     >
-      {/* ================= NAVBAR ================= */}
-
-      <header
-        className="
-          h-[75px]
-          px-[6%]
-          bg-[#091928]
-          flex
-          items-center
-          justify-between
-          text-white
-        "
-      >
-        {/* LOGO */}
-
-        <div
-          onClick={() => go("/")}
-          className="
-            font-extrabold
-            cursor-pointer
-            flex
-            items-center
-          "
-        >
-          <b
-            className="
-              text-[#b9e92f]
-              border-2
-              border-[#b9e92f]
-              px-[10px]
-              py-[6px]
-              rounded-lg
-              mr-2
-            "
-          >
-            ✓
-          </b>
-          YojnaSetu
-        </div>
-
-        {/* NAV */}
-
-        <nav
-          className="
-            border
-            border-white/60
-            rounded-[25px]
-            p-[3px]
-            flex
-            max-[800px]:hidden
-          "
-        >
-          <button
-            onClick={() => go("/home")}
-            className="
-              border-0
-              bg-transparent
-              text-white
-              px-[15px]
-              py-[9px]
-              rounded-[20px]
-              text-[12px]
-              cursor-pointer
-              hover:bg-white/[0.13]
-            "
-          >
-            Home
-          </button>
-
-          <button
-            className="
-              border-0
-              bg-white/[0.13]
-              text-white
-              px-[15px]
-              py-[9px]
-              rounded-[20px]
-              text-[12px]
-              cursor-pointer
-            "
-          >
-            Search Schemes
-          </button>
-
-          <button
-            onClick={() => go("/emi")}
-            className="
-              border-0
-              bg-transparent
-              text-white
-              px-[15px]
-              py-[9px]
-              rounded-[20px]
-              text-[12px]
-              cursor-pointer
-              hover:bg-white/[0.13]
-            "
-          >
-            Calculate EMI
-          </button>
-
-          <button
-            onClick={() => go("/partners")}
-            className="
-              border-0
-              bg-transparent
-              text-white
-              px-[15px]
-              py-[9px]
-              rounded-[20px]
-              text-[12px]
-              cursor-pointer
-              hover:bg-white/[0.13]
-            "
-          >
-            Find Partners
-          </button>
-        </nav>
-
-        {/* LOGIN */}
-
-        <button
-          onClick={() => go("/auth")}
-          className="
-            bg-[#b9e92f]
-            border-0
-            px-[18px]
-            py-[9px]
-            rounded-[20px]
-            text-[#091928]
-            font-bold
-            cursor-pointer
-            hover:brightness-95
-            transition
-          "
-        >
-          Login
-        </button>
-      </header>
+      <Navbar />
 
       {/* ================= MAIN ================= */}
 
@@ -455,6 +319,7 @@ export default function SearchSchemes() {
           </div>
         )}
       </main>
+      <Footer />
     </div>
   );
 }

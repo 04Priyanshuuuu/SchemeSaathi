@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function UserProfile() {
   const [editing, setEditing] = useState(false);
@@ -29,62 +31,7 @@ export default function UserProfile() {
         text-[#091928]
       "
     >
-      {/* ================= NAVBAR ================= */}
-
-      <header
-        className="
-          h-[75px]
-          px-[7%]
-          bg-[#091928]
-          text-white
-          flex
-          items-center
-          justify-between
-        "
-      >
-        <div
-          onClick={() => go("/")}
-          className="
-            font-extrabold
-            cursor-pointer
-            flex
-            items-center
-          "
-        >
-          <b
-            className="
-              text-[#b9e92f]
-              border-2
-              border-[#b9e92f]
-              px-[9px]
-              py-[5px]
-              rounded-lg
-              mr-2
-            "
-          >
-            ✓
-          </b>
-          YojnaSetu
-        </div>
-
-        <button
-          onClick={() => go("/home")}
-          className="
-            border-0
-            bg-[#b9e92f]
-            text-[#091928]
-            px-[17px]
-            py-[10px]
-            rounded-[22px]
-            font-bold
-            cursor-pointer
-            hover:brightness-95
-            transition
-          "
-        >
-          Back to Home
-        </button>
-      </header>
+      <Navbar />
 
       {/* ================= MAIN ================= */}
 
@@ -455,6 +402,7 @@ export default function UserProfile() {
           </button>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

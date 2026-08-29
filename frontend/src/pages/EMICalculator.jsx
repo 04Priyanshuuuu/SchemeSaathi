@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function EMICalculator() {
@@ -32,6 +33,8 @@ export default function EMICalculator() {
 
   return (
     <main className="min-h-screen w-full bg-[#091928] font-['Inter','Segoe_UI',Roboto,Helvetica,Arial,sans-serif] text-[#091928]">
+      <Navbar />
+
       {/* ================= EMI SECTION ================= */}
       <section
         className="

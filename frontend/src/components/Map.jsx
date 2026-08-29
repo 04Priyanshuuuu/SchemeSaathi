@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 export default function Map() {
   const go = (path) => {
@@ -7,53 +8,7 @@ export default function Map() {
 
   return (
     <div className="min-h-screen bg-[#eef2e3] text-[#091928]">
-      
-      {/* ================= NAVBAR ================= */}
-
-      <header
-        className="
-          h-[75px] px-[7%]
-          bg-[#091928] text-white
-          flex items-center justify-between
-        "
-      >
-        <div
-          onClick={() => go("/")}
-          className="
-            font-extrabold cursor-pointer
-            flex items-center
-          "
-        >
-          <b
-            className="
-              text-[#b9e92f]
-              border-2 border-[#b9e92f]
-              px-[9px] py-[5px]
-              rounded-lg
-              mr-2
-            "
-          >
-            ✓
-          </b>
-
-          YojnaSetu
-        </div>
-
-        <button
-          onClick={() => go("/partners")}
-          className="
-            border-0
-            bg-[#b9e92f]
-            text-[#091928]
-            px-[17px] py-[10px]
-            rounded-[22px]
-            font-bold
-            cursor-pointer
-          "
-        >
-          ← Back to Partners
-        </button>
-      </header>
+      <Navbar />
 
       {/* ================= MAIN ================= */}
 
@@ -244,9 +199,7 @@ export default function Map() {
               shadow-[0_4px_15px_rgba(0,0,0,0.12)]
             "
           >
-            <h2 className="text-[24px] font-bold m-0">
-              Eligible Partners
-            </h2>
+            <h2 className="text-[24px] font-bold m-0">Eligible Partners</h2>
 
             {/* Partner 1 */}
 
@@ -256,9 +209,7 @@ export default function Map() {
                 py-[18px]
               "
             >
-              <b className="block">
-                State Channelizing Agency
-              </b>
+              <b className="block">State Channelizing Agency</b>
 
               <span
                 className="
@@ -280,9 +231,7 @@ export default function Map() {
                 py-[18px]
               "
             >
-              <b className="block">
-                Public Sector Bank
-              </b>
+              <b className="block">Public Sector Bank</b>
 
               <span
                 className="
@@ -304,9 +253,7 @@ export default function Map() {
                 py-[18px]
               "
             >
-              <b className="block">
-                Regional Rural Bank
-              </b>
+              <b className="block">Regional Rural Bank</b>
 
               <span
                 className="

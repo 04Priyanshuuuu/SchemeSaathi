@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function RecommendedSchemes() {
@@ -16,6 +17,8 @@ export default function RecommendedSchemes() {
         font-[Inter,'Segoe_UI',Roboto,Helvetica,Arial,sans-serif]
       "
     >
+      <Navbar />
+
       {/* ======================================================
           SCHEME CONTENT
           ====================================================== */}

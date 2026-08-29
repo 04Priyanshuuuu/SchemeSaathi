@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import LandingPage from "./pages/LandingPage";
-import AuthPage from "./pages/Authpage";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 import HomePage from "./pages/HomePage";
 import EMICalculator from "./pages/EMICalculator";
 import SearchSchemes from "./pages/SearchSchemes";
@@ -33,8 +34,12 @@ function App() {
 
   const renderPage = () => {
     switch (route) {
-      case "#/auth":
-        return <AuthPage />;
+
+      case "#/signup":
+        return <Signup />;
+
+      case "#/login":
+        return <Login />;
 
       case "#/home":
         return <HomePage />;

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function ContactUs() {
   const [sent, setSent] = useState(false);
@@ -14,22 +16,7 @@ export default function ContactUs() {
 
   return (
     <div className="min-h-screen bg-[#eef2e3] text-[#091928]">
-      {/* Navbar */}
-      <header className="flex h-[75px] items-center justify-between bg-[#091928] px-[7%] text-white">
-        <div onClick={() => go("/")} className="cursor-pointer font-extrabold">
-          <b className="mr-2 rounded-lg border-2 border-[#b9e92f] px-[9px] py-[5px] text-[#b9e92f]">
-            ✓
-          </b>
-          YojnaSetu
-        </div>
-
-        <button
-          onClick={() => go("/home")}
-          className="rounded-[22px] border-0 bg-[#b9e92f] px-5 py-2.5 font-bold text-[#091928] cursor-pointer"
-        >
-          Home
-        </button>
-      </header>
+      <Navbar />
 
       {/* Main */}
       <main className="mx-auto grid max-w-[1050px] grid-cols-2 items-center gap-[50px] px-[25px] py-[70px] max-[750px]:grid-cols-1">
@@ -114,6 +101,7 @@ export default function ContactUs() {
           </button>
         </form>
       </main>
+      <Footer />
     </div>
   );
 }
