@@ -43,282 +43,514 @@ export default function SearchSchemes() {
   };
 
   return (
-    <div
-      className="
-        min-h-screen
-        bg-[#eef2e3]
-        text-[#091928]
-      "
-    >
-      <Navbar />
+    <div className="min-h-screen bg-[#eef2e3] text-[#091928]">
+      {/* =====================================================
+          TOP / NAVBAR / HERO
+          Same visual style as Landing Page
+      ===================================================== */}
+      <section className="relative overflow-hidden bg-[#091928]">
+        {/* Landing Page gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#091928] via-[#142d3f] to-[#657077]" />
 
-      {/* ================= MAIN ================= */}
+        {/* Soft green glow */}
+        <div className="absolute top-16 right-[-80px] w-[420px] h-[420px] rounded-full bg-[#B9E92F]/10 blur-3xl" />
 
-      <main
-        className="
-          max-w-[1150px]
-          mx-auto
-          px-[25px]
-          py-[60px]
-          max-[600px]:px-5
-          max-[600px]:py-10
-        "
-      >
-        {/* HEADING */}
+        {/* Decorative dots */}
+        <div className="absolute top-[42%] left-[18%] w-1 h-1 rounded-full bg-white/30" />
+        <div className="absolute top-[34%] right-[28%] w-1 h-1 rounded-full bg-white/30" />
+        <div className="absolute top-[55%] right-[12%] w-1 h-1 rounded-full bg-white/20" />
 
-        <div>
+        {/* Navbar — unchanged */}
+        <Navbar />
+
+        {/* =================================================
+            PAGE HEADER
+        ================================================= */}
+        <div
+          className="
+            relative
+            z-10
+            mx-auto
+            max-w-[1150px]
+            px-6
+            lg:px-10
+            pt-[150px]
+            pb-[65px]
+            max-[600px]:pt-[120px]
+            max-[600px]:pb-[50px]
+          "
+        >
           <p
             className="
               m-0
-              text-[#8daf17]
-              font-extrabold
-              tracking-[2px]
+              text-sm
+              font-bold
+              uppercase
+              tracking-[2.5px]
+              text-[#B9E92F]
             "
           >
-            YOJNASETU
+            YojnaSetu
           </p>
 
           <h1
             className="
-              text-[42px]
+              mt-3
+              text-[44px]
               font-bold
-              my-2
-              max-[600px]:text-[32px]
+              leading-tight
+              tracking-tight
+              text-white
+              sm:text-[52px]
+              lg:text-[58px]
+              max-[600px]:text-[36px]
             "
           >
             Find Financial Assistance
           </h1>
 
-          <span className="text-[#68747b]">
-            Search and explore schemes according to your financial needs.
-          </span>
-        </div>
-
-        {/* ================= SEARCH ================= */}
-
-        <div
-          className="
-            my-[35px]
-            flex
-            gap-3
-            max-[600px]:flex-col
-          "
-        >
-          <input
-            placeholder="Search schemes, business, education..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
+          <p
             className="
-              flex-1
-              border
-              border-[#d5d9d3]
-              bg-white
-              px-[17px]
-              py-[14px]
-              rounded-xl
-              outline-none
-              focus:border-[#91b91b]
-              focus:ring-2
-              focus:ring-[#b9e92f]/30
-            "
-          />
-
-          <select
-            value={type}
-            onChange={(e) => setType(e.target.value)}
-            className="
-              border
-              border-[#d5d9d3]
-              bg-white
-              px-[17px]
-              py-[14px]
-              rounded-xl
-              outline-none
-              cursor-pointer
-              focus:border-[#91b91b]
+              mt-4
+              max-w-[650px]
+              text-sm
+              leading-relaxed
+              text-white/70
+              sm:text-base
             "
           >
-            <option>All</option>
-            <option>Business</option>
-            <option>Education</option>
-          </select>
+            Search and explore schemes according to your financial needs.
+          </p>
         </div>
+      </section>
 
-        {/* ================= SCHEME GRID ================= */}
+      {/* =====================================================
+          MAIN SEARCH AREA
+      ===================================================== */}
+      <main
+        className="
+          bg-[#eef2e3]
+          px-5
+          py-12
+          sm:px-6
+          lg:px-10
+          lg:py-16
+        "
+      >
+        <div className="mx-auto max-w-[1150px]">
+          {/* =================================================
+              SEARCH BOX
+          ================================================= */}
+          <section
+            className="
+              rounded-[28px]
+              border
+              border-[#e0e6d8]
+              bg-white
+              p-5
+              shadow-[0_10px_30px_rgba(9,25,40,0.08)]
+              sm:p-7
+              lg:p-8
+            "
+          >
+            <div className="mb-5">
+              <p className="m-0 text-sm font-semibold text-[#8daf17]">
+                SCHEME DISCOVERY
+              </p>
 
-        <div
-          className="
-            grid
-            grid-cols-3
-            gap-5
-            max-[800px]:grid-cols-1
-          "
-        >
-          {filtered.map((scheme) => (
-            <article
-              key={scheme.title}
+              <h2 className="mt-1 text-2xl font-bold text-[#091928] sm:text-3xl">
+                What are you looking for?
+              </h2>
+            </div>
+
+            <div
               className="
-                bg-white
-                rounded-[18px]
-                p-[25px]
-                shadow-[0_4px_15px_rgba(0,0,0,0.12)]
-                transition
-                duration-150
-                hover:-translate-y-1
-                hover:shadow-[0_7px_18px_rgba(0,0,0,0.15)]
+                flex
+                gap-3
+                max-[650px]:flex-col
               "
             >
-              {/* CARD TOP */}
-
-              <div
-                className="
-                  flex
-                  justify-between
-                  items-center
-                "
-              >
+              {/* SEARCH INPUT */}
+              <div className="relative flex-1">
                 <span
                   className="
-                    text-[#63710d]
-                    bg-[#edf7c9]
-                    px-[10px]
-                    py-[5px]
-                    rounded-[20px]
-                    text-[11px]
-                    font-bold
+                    pointer-events-none
+                    absolute
+                    left-4
+                    top-1/2
+                    -translate-y-1/2
+                    text-lg
                   "
                 >
-                  {scheme.type}
+                  🔍
                 </span>
 
-                <b
+                <input
+                  type="text"
+                  placeholder="Search schemes, business, education..."
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
                   className="
-                    bg-[#b9e92f]
-                    w-[30px]
-                    h-[30px]
-                    grid
-                    place-items-center
+                    block
+                    w-full
+                    rounded-xl
+                    border
+                    border-[#d5d9d3]
+                    bg-[#fafcf7]
+                    py-3.5
+                    pl-11
+                    pr-4
+                    text-sm
+                    text-[#091928]
+                    outline-none
+                    transition
+                    placeholder:text-[#9aa3a7]
+                    focus:border-[#B9E92F]
+                    focus:ring-2
+                    focus:ring-[#B9E92F]/30
+                  "
+                />
+              </div>
+
+              {/* CATEGORY SELECT */}
+              <select
+                value={type}
+                onChange={(e) => setType(e.target.value)}
+                className="
+                  min-w-[170px]
+                  cursor-pointer
+                  rounded-xl
+                  border
+                  border-[#d5d9d3]
+                  bg-[#fafcf7]
+                  px-4
+                  py-3.5
+                  text-sm
+                  text-[#091928]
+                  outline-none
+                  transition
+                  focus:border-[#B9E92F]
+                  focus:ring-2
+                  focus:ring-[#B9E92F]/30
+                  max-[650px]:w-full
+                "
+              >
+                <option value="All">All Categories</option>
+                <option value="Business">Business</option>
+                <option value="Education">Education</option>
+              </select>
+            </div>
+
+            {/* RESULT COUNT */}
+            <div className="mt-5 flex items-center justify-between gap-3">
+              <p className="m-0 text-sm text-[#68747b]">
+                Showing{" "}
+                <span className="font-bold text-[#091928]">
+                  {filtered.length}
+                </span>{" "}
+                {filtered.length === 1 ? "scheme" : "schemes"}
+              </p>
+
+              {(query || type !== "All") && (
+                <button
+                  onClick={() => {
+                    setQuery("");
+                    setType("All");
+                  }}
+                  className="
                     rounded-full
+                    border
+                    border-[#d5d9d3]
+                    bg-white
+                    px-4
+                    py-1.5
+                    text-xs
+                    font-semibold
+                    text-[#68747b]
+                    transition
+                    hover:border-[#B9E92F]
+                    hover:text-[#091928]
+                    cursor-pointer
+                  "
+                >
+                  Clear Filters
+                </button>
+              )}
+            </div>
+          </section>
+
+          {/* =================================================
+              SCHEME GRID
+          ================================================= */}
+          <div
+            className="
+              mt-8
+              grid
+              grid-cols-3
+              gap-6
+              max-[950px]:grid-cols-2
+              max-[650px]:grid-cols-1
+            "
+          >
+            {filtered.map((scheme) => (
+              <article
+                key={scheme.title}
+                className="
+                  group
+                  flex
+                  flex-col
+                  rounded-[24px]
+                  border
+                  border-[#e0e6d8]
+                  bg-white
+                  p-6
+                  shadow-[0_8px_25px_rgba(9,25,40,0.07)]
+                  transition
+                  duration-200
+                  hover:-translate-y-1.5
+                  hover:shadow-[0_15px_32px_rgba(9,25,40,0.11)]
+                "
+              >
+                {/* CARD TOP */}
+                <div className="flex items-center justify-between gap-3">
+                  <span
+                    className="
+                      rounded-full
+                      border
+                      border-[#d5ed8d]
+                      bg-[#effbd9]
+                      px-3
+                      py-1.5
+                      text-[11px]
+                      font-bold
+                      uppercase
+                      tracking-wide
+                      text-[#63710d]
+                    "
+                  >
+                    {scheme.type}
+                  </span>
+
+                  <div
+                    className="
+                      flex
+                      h-9
+                      w-9
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-full
+                      bg-[#B9E92F]
+                      font-bold
+                      text-[#091928]
+                    "
+                  >
+                    ✓
+                  </div>
+                </div>
+
+                {/* TITLE */}
+                <h2
+                  className="
+                    mt-6
+                    text-[21px]
+                    font-bold
+                    leading-snug
                     text-[#091928]
                   "
                 >
-                  ✓
-                </b>
-              </div>
+                  {scheme.title}
+                </h2>
 
-              {/* TITLE */}
+                {/* DESCRIPTION */}
+                <p
+                  className="
+                    mt-3
+                    min-h-[65px]
+                    text-sm
+                    leading-[1.7]
+                    text-[#68747b]
+                  "
+                >
+                  {scheme.text}
+                </p>
 
-              <h2
-                className="
-                  text-[21px]
-                  font-bold
-                  mt-[22px]
-                  mb-0
-                "
-              >
-                {scheme.title}
-              </h2>
+                {/* INFO */}
+                <div className="my-6 grid gap-3">
+                  {/* LOAN AMOUNT */}
+                  <div
+                    className="
+                      rounded-xl
+                      border
+                      border-[#e6e9e2]
+                      bg-[#f7f9f3]
+                      p-3
+                    "
+                  >
+                    <small
+                      className="
+                        block
+                        text-[11px]
+                        font-medium
+                        uppercase
+                        tracking-wide
+                        text-[#7d878d]
+                      "
+                    >
+                      Loan Amount
+                    </small>
 
-              {/* DESCRIPTION */}
+                    <strong className="mt-1 block text-sm text-[#091928]">
+                      {scheme.amount}
+                    </strong>
+                  </div>
 
-              <p
-                className="
-                  text-[#68747b]
-                  leading-[1.5]
-                  text-[14px]
-                  mt-3
-                "
-              >
-                {scheme.text}
-              </p>
+                  {/* INTEREST */}
+                  <div
+                    className="
+                      rounded-xl
+                      border
+                      border-[#e6e9e2]
+                      bg-[#f7f9f3]
+                      p-3
+                    "
+                  >
+                    <small
+                      className="
+                        block
+                        text-[11px]
+                        font-medium
+                        uppercase
+                        tracking-wide
+                        text-[#7d878d]
+                      "
+                    >
+                      Interest
+                    </small>
 
-              {/* INFO */}
+                    <strong className="mt-1 block text-sm text-[#091928]">
+                      {scheme.rate}
+                    </strong>
+                  </div>
+                </div>
 
+                {/* ELIGIBILITY */}
+                <button
+                  onClick={() => go("/recommended")}
+                  className="
+                    mt-auto
+                    w-full
+                    rounded-full
+                    border-0
+                    bg-[#091928]
+                    px-4
+                    py-3.5
+                    text-sm
+                    font-semibold
+                    text-white
+                    transition
+                    hover:bg-[#142d3f]
+                    hover:shadow-md
+                    cursor-pointer
+                  "
+                >
+                  Check Eligibility →
+                </button>
+              </article>
+            ))}
+          </div>
+
+          {/* =================================================
+              NO RESULTS
+          ================================================= */}
+          {filtered.length === 0 && (
+            <div
+              className="
+                mt-8
+                rounded-[24px]
+                border
+                border-[#e0e6d8]
+                bg-white
+                px-6
+                py-16
+                text-center
+                shadow-[0_8px_25px_rgba(9,25,40,0.06)]
+              "
+            >
               <div
                 className="
-                  my-[25px]
-                  grid
-                  gap-3
+                  mx-auto
+                  flex
+                  h-16
+                  w-16
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-[#effbd9]
+                  text-2xl
                 "
               >
-                <div
-                  className="
-                    p-[10px]
-                    bg-[#f4f6ef]
-                    rounded-[9px]
-                  "
-                >
-                  <small
-                    className="
-                      block
-                      text-[#7d878d]
-                      text-[11px]
-                    "
-                  >
-                    Loan Amount
-                  </small>
-
-                  <strong className="block">{scheme.amount}</strong>
-                </div>
-
-                <div
-                  className="
-                    p-[10px]
-                    bg-[#f4f6ef]
-                    rounded-[9px]
-                  "
-                >
-                  <small
-                    className="
-                      block
-                      text-[#7d878d]
-                      text-[11px]
-                    "
-                  >
-                    Interest
-                  </small>
-
-                  <strong className="block">{scheme.rate}</strong>
-                </div>
+                🔍
               </div>
 
-              {/* ELIGIBILITY */}
+              <h3 className="mt-5 text-xl font-bold text-[#091928]">
+                No schemes found
+              </h3>
+
+              <p className="mt-2 text-sm text-[#68747b]">
+                Try a different search term or category.
+              </p>
 
               <button
-                onClick={() => go("/recommended")}
+                onClick={() => {
+                  setQuery("");
+                  setType("All");
+                }}
                 className="
-                  w-full
-                  border-0
-                  bg-[#091928]
-                  text-white
-                  py-3
-                  rounded-[22px]
-                  font-semibold
-                  cursor-pointer
-                  hover:bg-[#10283c]
+                  mt-5
+                  rounded-full
+                  bg-[#B9E92F]
+                  px-6
+                  py-2.5
+                  text-sm
+                  font-bold
+                  text-[#091928]
                   transition
+                  hover:brightness-95
+                  cursor-pointer
                 "
               >
-                Check Eligibility →
+                Reset Search
               </button>
-            </article>
-          ))}
-        </div>
+            </div>
+          )}
 
-        {/* NO RESULTS */}
-
-        {filtered.length === 0 && (
+          {/* =================================================
+              HELPFUL NOTE
+          ================================================= */}
           <div
             className="
+              mt-10
+              rounded-[22px]
+              border
+              border-[#d5ed8d]
+              bg-[#effbd9]
+              p-5
               text-center
-              py-16
-              text-[#68747b]
             "
           >
-            No schemes found.
+            <p className="m-0 text-sm leading-relaxed text-[#52620d]">
+              <span className="font-bold">💡 Tip:</span>{" "}
+              Explore the schemes that match your requirement and check your
+              eligibility before proceeding.
+            </p>
           </div>
-        )}
+        </div>
       </main>
+
+      {/* =====================================================
+          FOOTER
+      ===================================================== */}
       <Footer />
     </div>
   );

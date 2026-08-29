@@ -3,207 +3,329 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function PrivacyPolicy() {
-  const go = (path) => {
-    window.location.hash = path;
-  };
-
   return (
     <div className="min-h-screen bg-[#eef2e3] text-[#091928]">
-      <Navbar />
+      {/* =====================================================
+          TOP / NAVBAR AREA
+          Same visual background as Landing Page
+      ===================================================== */}
+      <section className="relative overflow-hidden bg-[#091928]">
+        {/* Landing-page style gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#091928] via-[#142d3f] to-[#657077]" />
 
-      {/* ================= MAIN ================= */}
+        {/* Soft green glow */}
+        <div className="absolute top-20 right-[-80px] w-[420px] h-[420px] rounded-full bg-[#B9E92F]/10 blur-3xl" />
 
-      <main
-        className="
-          max-w-[900px]
-          mx-auto
-          px-[25px]
-          py-[60px]
-          max-[600px]:px-5
-          max-[600px]:py-10
-        "
-      >
-        {/* TITLE */}
+        {/* Small decorative dots */}
+        <div className="absolute top-[45%] left-[18%] w-1 h-1 rounded-full bg-white/30" />
+        <div className="absolute top-[35%] right-[28%] w-1 h-1 rounded-full bg-white/30" />
+        <div className="absolute top-[55%] right-[12%] w-1 h-1 rounded-full bg-white/20" />
 
-        <div>
+        {/* Navbar stays EXACTLY unchanged */}
+        <Navbar />
+
+        {/* =================================================
+            PAGE HEADER
+        ================================================= */}
+        <div
+          className="
+            relative z-10
+            max-w-[1000px]
+            mx-auto
+            px-6
+            lg:px-10
+            pt-[155px]
+            pb-[75px]
+            max-[600px]:pt-[125px]
+            max-[600px]:pb-[55px]
+          "
+        >
           <p
             className="
               m-0
-              text-[#8daf17]
-              font-extrabold
-              tracking-[2px]
+              text-[#B9E92F]
+              font-bold
+              text-sm
+              tracking-[2.5px]
+              uppercase
             "
           >
-            YOJNASETU
+            YojnaSetu
           </p>
 
           <h1
             className="
-              text-[44px]
+              mt-3
+              mb-3
+              text-white
+              text-[48px]
+              sm:text-[54px]
+              lg:text-[60px]
+              leading-tight
               font-bold
-              my-2
-              max-[600px]:text-[34px]
+              tracking-tight
+              max-[600px]:text-[38px]
             "
           >
             Privacy Policy
           </h1>
 
-          <span className="text-[#68747b] text-sm">
+          <p className="m-0 text-white/70 text-sm sm:text-base">
             Last updated: August 2026
-          </span>
+          </p>
         </div>
+      </section>
 
-        {/* ================= PRIVACY CARD ================= */}
-
-        <article
-          className="
-            bg-white
-            mt-[35px]
-            p-[35px]
-            rounded-[20px]
-            shadow-[0_4px_15px_rgba(0,0,0,0.12)]
-            max-[600px]:p-5
-          "
-        >
-          {/* SECTION 1 */}
-
-          <section
+      {/* =====================================================
+          MAIN PRIVACY CONTENT
+      ===================================================== */}
+      <main
+        className="
+          relative
+          bg-[#eef2e3]
+          px-5
+          py-14
+          sm:px-6
+          lg:px-10
+          lg:py-16
+        "
+      >
+        <div className="max-w-[1000px] mx-auto">
+          {/* =================================================
+              PRIVACY CARD
+          ================================================= */}
+          <article
             className="
-              pt-[10px]
-              pb-[25px]
-              mb-5
-              border-b
-              border-[#d5d9d3]
-              last:border-0
+              bg-white
+              rounded-[28px]
+              border
+              border-[#e2e7dc]
+              shadow-[0_12px_35px_rgba(9,25,40,0.10)]
+              p-7
+              sm:p-9
+              lg:p-11
             "
           >
-            <h2 className="text-[20px] font-bold mt-0">
-              1. Information We Collect
-            </h2>
-
-            <p
+            {/* =================================================
+                SECTION 1
+            ================================================= */}
+            <section
               className="
-                text-[#68747b]
-                leading-[1.7]
-                text-[14px]
+                pb-8
+                mb-8
+                border-b
+                border-[#dfe4dc]
               "
             >
-              YojnaSetu may collect information required to understand your
-              financial requirements, eligibility and preferences for scheme
-              recommendations.
-            </p>
-          </section>
+              <div className="flex items-start gap-4">
+                <div
+                  className="
+                    shrink-0
+                    w-10
+                    h-10
+                    rounded-xl
+                    bg-[#effbd9]
+                    text-[#7e9f10]
+                    flex
+                    items-center
+                    justify-center
+                    font-bold
+                  "
+                >
+                  01
+                </div>
 
-          {/* SECTION 2 */}
+                <div>
+                  <h2 className="text-[21px] sm:text-[22px] font-bold text-[#091928] mt-1 mb-3">
+                    Information We Collect
+                  </h2>
 
-          <section
-            className="
-              pt-[10px]
-              pb-[25px]
-              mb-5
-              border-b
-              border-[#d5d9d3]
-              last:border-0
-            "
-          >
-            <h2 className="text-[20px] font-bold mt-0">
-              2. How We Use Information
-            </h2>
+                  <p className="m-0 text-[#68747b] leading-[1.8] text-[15px]">
+                    YojnaSetu may collect information required to understand
+                    your financial requirements, eligibility and preferences
+                    for scheme recommendations.
+                  </p>
+                </div>
+              </div>
+            </section>
 
-            <p
+            {/* =================================================
+                SECTION 2
+            ================================================= */}
+            <section
               className="
-                text-[#68747b]
-                leading-[1.7]
-                text-[14px]
+                pb-8
+                mb-8
+                border-b
+                border-[#dfe4dc]
               "
             >
-              Information may be used to provide scheme recommendations,
-              financial calculations, partner discovery and improve the platform
-              experience.
-            </p>
-          </section>
+              <div className="flex items-start gap-4">
+                <div
+                  className="
+                    shrink-0
+                    w-10
+                    h-10
+                    rounded-xl
+                    bg-[#effbd9]
+                    text-[#7e9f10]
+                    flex
+                    items-center
+                    justify-center
+                    font-bold
+                  "
+                >
+                  02
+                </div>
 
-          {/* SECTION 3 */}
+                <div>
+                  <h2 className="text-[21px] sm:text-[22px] font-bold text-[#091928] mt-1 mb-3">
+                    How We Use Information
+                  </h2>
 
-          <section
-            className="
-              pt-[10px]
-              pb-[25px]
-              mb-5
-              border-b
-              border-[#d5d9d3]
-              last:border-0
-            "
-          >
-            <h2 className="text-[20px] font-bold mt-0">3. Data Security</h2>
+                  <p className="m-0 text-[#68747b] leading-[1.8] text-[15px]">
+                    Information may be used to provide scheme recommendations,
+                    financial calculations, partner discovery and improve the
+                    platform experience.
+                  </p>
+                </div>
+              </div>
+            </section>
 
-            <p
+            {/* =================================================
+                SECTION 3
+            ================================================= */}
+            <section
               className="
-                text-[#68747b]
-                leading-[1.7]
-                text-[14px]
+                pb-8
+                mb-8
+                border-b
+                border-[#dfe4dc]
               "
             >
-              We take reasonable measures to protect information handled by the
-              platform against unauthorized access or misuse.
-            </p>
-          </section>
+              <div className="flex items-start gap-4">
+                <div
+                  className="
+                    shrink-0
+                    w-10
+                    h-10
+                    rounded-xl
+                    bg-[#effbd9]
+                    text-[#7e9f10]
+                    flex
+                    items-center
+                    justify-center
+                    font-bold
+                  "
+                >
+                  03
+                </div>
 
-          {/* SECTION 4 */}
+                <div>
+                  <h2 className="text-[21px] sm:text-[22px] font-bold text-[#091928] mt-1 mb-3">
+                    Data Security
+                  </h2>
 
-          <section
-            className="
-              pt-[10px]
-              pb-[25px]
-              mb-5
-              border-b
-              border-[#d5d9d3]
-              last:border-0
-            "
-          >
-            <h2 className="text-[20px] font-bold mt-0">
-              4. Third-Party Services
-            </h2>
+                  <p className="m-0 text-[#68747b] leading-[1.8] text-[15px]">
+                    We take reasonable measures to protect information handled
+                    by the platform against unauthorized access or misuse.
+                  </p>
+                </div>
+              </div>
+            </section>
 
-            <p
+            {/* =================================================
+                SECTION 4
+            ================================================= */}
+            <section
               className="
-                text-[#68747b]
-                leading-[1.7]
-                text-[14px]
+                pb-8
+                mb-8
+                border-b
+                border-[#dfe4dc]
               "
             >
-              Mapping, authentication or other services may be integrated into
-              YojnaSetu where required for platform functionality.
+              <div className="flex items-start gap-4">
+                <div
+                  className="
+                    shrink-0
+                    w-10
+                    h-10
+                    rounded-xl
+                    bg-[#effbd9]
+                    text-[#7e9f10]
+                    flex
+                    items-center
+                    justify-center
+                    font-bold
+                  "
+                >
+                  04
+                </div>
+
+                <div>
+                  <h2 className="text-[21px] sm:text-[22px] font-bold text-[#091928] mt-1 mb-3">
+                    Third-Party Services
+                  </h2>
+
+                  <p className="m-0 text-[#68747b] leading-[1.8] text-[15px]">
+                    Mapping, authentication or other services may be integrated
+                    into YojnaSetu where required for platform functionality.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* =================================================
+                SECTION 5
+            ================================================= */}
+            <section>
+              <div className="flex items-start gap-4">
+                <div
+                  className="
+                    shrink-0
+                    w-10
+                    h-10
+                    rounded-xl
+                    bg-[#effbd9]
+                    text-[#7e9f10]
+                    flex
+                    items-center
+                    justify-center
+                    font-bold
+                  "
+                >
+                  05
+                </div>
+
+                <div>
+                  <h2 className="text-[21px] sm:text-[22px] font-bold text-[#091928] mt-1 mb-3">
+                    Contact
+                  </h2>
+
+                  <p className="m-0 text-[#68747b] leading-[1.8] text-[15px]">
+                    For privacy-related questions, please contact the YojnaSetu
+                    support team.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </article>
+
+          {/* =================================================
+              SMALL BOTTOM NOTE
+          ================================================= */}
+          <div className="text-center mt-8">
+            <p className="text-[#68747b] text-sm">
+              Your privacy and trust are important to us.
             </p>
-          </section>
-
-          {/* SECTION 5 */}
-
-          <section
-            className="
-              pt-[10px]
-              pb-[25px]
-              mb-5
-              border-b
-              border-[#d5d9d3]
-              last:border-0
-            "
-          >
-            <h2 className="text-[20px] font-bold mt-0">5. Contact</h2>
-
-            <p
-              className="
-                text-[#68747b]
-                leading-[1.7]
-                text-[14px]
-              "
-            >
-              For privacy-related questions, please contact the YojnaSetu
-              support team.
-            </p>
-          </section>
-        </article>
+          </div>
+        </div>
       </main>
+
+      {/* =====================================================
+          FOOTER
+      ===================================================== */}
       <Footer />
     </div>
   );

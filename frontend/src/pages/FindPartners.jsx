@@ -8,238 +8,433 @@ export default function FindPartners() {
   };
 
   return (
-    <main className="min-h-screen w-full bg-[#091928] font-['Inter','Segoe_UI',Roboto,Helvetica,Arial,sans-serif] text-[#091928]">
-      <Navbar />
+    <div className="min-h-screen bg-[#eef2e3] text-[#091928]">
+      {/* =====================================================
+          TOP / NAVBAR / HERO
+          Same visual style as Landing Page
+      ===================================================== */}
+      <section className="relative overflow-hidden bg-[#091928]">
+        {/* Landing Page gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#091928] via-[#142d3f] to-[#657077]" />
 
-      {/* ================= PARTNER SECTION ================= */}
-      <section
-        className="
-          relative min-h-[545px] w-full overflow-hidden
-          bg-[radial-gradient(circle_at_50%_10%,rgba(255,255,255,0.13)_0%,rgba(255,255,255,0.04)_25%,transparent_48%),linear-gradient(180deg,#091928_0%,#132a3b_30%,#69747a_72%,#e9e9e5_100%)]
-          px-[7%] pb-[42px] pt-[18px]
-          max-[800px]:px-[5%]
-          max-[600px]:min-h-0
-          max-[600px]:px-[15px]
-          max-[600px]:pb-[35px]
-          max-[600px]:pt-[15px]
-        "
-      >
-        {/* TOP */}
-        <div className="flex w-full items-center justify-between">
-          <button
-            className="h-12 w-12 cursor-pointer border-0 bg-transparent p-0 max-[600px]:h-10 max-[600px]:w-10"
-            onClick={() => goTo("#/")}
-            aria-label="YojnaSetu Home"
+        {/* Soft green glow */}
+        <div className="absolute top-16 right-[-80px] h-[420px] w-[420px] rounded-full bg-[#B9E92F]/10 blur-3xl" />
+
+        {/* Decorative dots */}
+        <div className="absolute top-[42%] left-[18%] h-1 w-1 rounded-full bg-white/30" />
+        <div className="absolute top-[34%] right-[28%] h-1 w-1 rounded-full bg-white/30" />
+        <div className="absolute top-[55%] right-[12%] h-1 w-1 rounded-full bg-white/20" />
+
+        {/* Navbar — unchanged */}
+        <Navbar />
+
+        {/* =================================================
+            PAGE HEADER
+        ================================================= */}
+        <div
+          className="
+            relative
+            z-10
+            mx-auto
+            max-w-[1050px]
+            px-6
+            pt-[150px]
+            pb-[65px]
+            lg:px-10
+            max-[600px]:px-5
+            max-[600px]:pt-[120px]
+            max-[600px]:pb-[50px]
+          "
+        >
+          <p
+            className="
+              m-0
+              text-sm
+              font-bold
+              uppercase
+              tracking-[2.5px]
+              text-[#B9E92F]
+            "
           >
-            <img
-              src="/logo.png"
-              alt="YojnaSetu"
-              className="h-full w-full object-contain"
-            />
-          </button>
+            YojnaSetu Partners
+          </p>
 
-          {/* LANGUAGE */}
-          <button
-            className="flex cursor-pointer items-center gap-[2px] border-0 bg-transparent p-0 text-white transition-transform hover:-translate-y-px"
-            onClick={() => alert("Language selection")}
-            aria-label="Change language"
+          <h1
+            className="
+              mt-3
+              text-[42px]
+              font-bold
+              leading-tight
+              tracking-tight
+              text-white
+              sm:text-[50px]
+              lg:text-[56px]
+              max-[600px]:text-[34px]
+            "
           >
-            <span className="rounded-[3px] border-[1.5px] border-white px-[3px] text-[10px]">
-              文
-            </span>
+            Find the Nearest Suitable Partner
+          </h1>
 
-            <span className="-ml-[3px] text-xs">अ</span>
-          </button>
+          <p
+            className="
+              mt-4
+              max-w-[700px]
+              text-sm
+              leading-relaxed
+              text-white/70
+              sm:text-base
+            "
+          >
+            Find nearby channel partners who can help you take the next step
+            with your financial assistance application.
+          </p>
         </div>
-
-        {/* TITLE */}
-        <h1
-          className="
-            mx-auto mb-10 mt-[18px]
-            text-center text-[clamp(22px,2.6vw,35px)]
-            font-bold leading-[1.15] text-[#B9E92F]
-            max-[600px]:mb-[30px]
-            max-[600px]:text-2xl
-          "
-        >
-          Find the nearest suitable Channel Partner
-        </h1>
-
-        {/* ================= PARTNER 1 ================= */}
-        <article
-          className="
-            relative mx-auto mb-[22px]
-            flex min-h-[95px] w-[min(900px,88%)]
-            items-start gap-3
-            rounded-[10px] bg-[#edf9d4]
-            px-[14px] pb-[11px] pr-[43px] pt-[13px]
-            shadow-[0_3px_8px_rgba(0,0,0,0.08)]
-            transition-all duration-150
-            hover:-translate-y-px
-            hover:shadow-[0_5px_12px_rgba(0,0,0,0.14)]
-            max-[800px]:w-[92%]
-            max-[600px]:mb-[18px]
-            max-[600px]:min-h-[105px]
-            max-[600px]:pr-[38px]
-          "
-        >
-          <div className="shrink-0 pt-px text-[25px] font-medium leading-none text-[#30383d] max-[600px]:text-[22px]">
-            #1
-          </div>
-
-          <div className="min-w-0 flex-1">
-            <h2 className="mb-[2px] text-[13px] font-bold leading-[1.15] text-[#18242b]">
-              Channel Partner 1
-            </h2>
-
-            <p className="m-0 text-[9px] leading-[1.3] text-[#28343b]">
-              Address
-            </p>
-
-            <div className="mt-2 flex items-center gap-[50px] max-[800px]:gap-[25px] max-[600px]:flex-wrap max-[600px]:gap-[10px]">
-              {/* Distance */}
-              <button
-                className="
-                  h-[22px] w-[102px]
-                  cursor-pointer rounded-[14px]
-                  border border-[#091928]
-                  bg-transparent
-                  text-[9px] font-semibold text-[#091928]
-                  transition-all
-                  hover:bg-[#091928] hover:text-white
-                  max-[600px]:w-[100px]
-                "
-                onClick={() => goTo("#/map")}
-              >
-                1.5 KM away
-              </button>
-
-              {/* Availability */}
-              <button
-                className="
-                  h-[22px] w-[152px]
-                  cursor-pointer rounded-[14px]
-                  border border-[#091928]
-                  bg-transparent
-                  text-[9px] font-semibold text-[#64a900]
-                  transition-all
-                  hover:bg-[#B9E92F] hover:text-[#091928]
-                  max-[600px]:w-[150px]
-                "
-                onClick={() => alert("Applications are being accepted")}
-              >
-                Accepting Applications
-              </button>
-            </div>
-          </div>
-
-          {/* Bookmark */}
-          <button
-            className="
-              absolute right-[17px] top-[10px]
-              h-[25px] w-5
-              cursor-pointer
-              border-0 bg-transparent p-0
-              text-[21px] leading-none text-[#68747a]
-              transition-all
-              hover:scale-[1.08] hover:text-[#091928]
-            "
-            onClick={() => alert("Partner saved")}
-            aria-label="Bookmark Channel Partner 1"
-          >
-            ♧
-          </button>
-        </article>
-
-        {/* ================= PARTNER 2 ================= */}
-        <article
-          className="
-            relative mx-auto mb-[22px]
-            flex min-h-[95px] w-[min(900px,88%)]
-            items-start gap-3
-            rounded-[10px] bg-[#edf9d4]
-            px-[14px] pb-[11px] pr-[43px] pt-[13px]
-            shadow-[0_3px_8px_rgba(0,0,0,0.08)]
-            transition-all duration-150
-            hover:-translate-y-px
-            hover:shadow-[0_5px_12px_rgba(0,0,0,0.14)]
-            max-[800px]:w-[92%]
-            max-[600px]:mb-[18px]
-            max-[600px]:min-h-[105px]
-            max-[600px]:pr-[38px]
-          "
-        >
-          <div className="shrink-0 pt-px text-[25px] font-medium leading-none text-[#30383d] max-[600px]:text-[22px]">
-            #2
-          </div>
-
-          <div className="min-w-0 flex-1">
-            <h2 className="mb-[2px] text-[13px] font-bold leading-[1.15] text-[#18242b]">
-              Channel Partner 2
-            </h2>
-
-            <p className="m-0 text-[9px] leading-[1.3] text-[#28343b]">
-              Address
-            </p>
-
-            <div className="mt-2 flex items-center gap-[50px] max-[800px]:gap-[25px] max-[600px]:flex-wrap max-[600px]:gap-[10px]">
-              {/* Distance */}
-              <button
-                className="
-                  h-[22px] w-[102px]
-                  cursor-pointer rounded-[14px]
-                  border border-[#091928]
-                  bg-transparent
-                  text-[9px] font-semibold text-[#091928]
-                  transition-all
-                  hover:bg-[#091928] hover:text-white
-                  max-[600px]:w-[100px]
-                "
-                onClick={() => goTo("#/map")}
-              >
-                3 KM away
-              </button>
-
-              {/* Availability */}
-              <button
-                className="
-                  h-[22px] w-[152px]
-                  cursor-pointer rounded-[14px]
-                  border border-[#091928]
-                  bg-transparent
-                  text-[9px] font-semibold text-[#ff3b30]
-                  transition-all
-                  hover:bg-[#ff3b30] hover:text-white
-                  max-[600px]:w-[150px]
-                "
-                onClick={() => alert("Currently unavailable")}
-              >
-                Currently Unavailable
-              </button>
-            </div>
-          </div>
-
-          {/* Bookmark */}
-          <button
-            className="
-              absolute right-[17px] top-[10px]
-              h-[25px] w-5
-              cursor-pointer
-              border-0 bg-transparent p-0
-              text-[21px] leading-none text-[#68747a]
-              transition-all
-              hover:scale-[1.08] hover:text-[#091928]
-            "
-            onClick={() => alert("Partner saved")}
-            aria-label="Bookmark Channel Partner 2"
-          >
-            ♧
-          </button>
-        </article>
       </section>
 
-      {/* ================= FOOTER ================= */}
+      {/* =====================================================
+          MAIN PARTNER AREA
+      ===================================================== */}
+      <main
+        className="
+          bg-[#eef2e3]
+          px-5
+          py-12
+          sm:px-6
+          lg:px-10
+          lg:py-16
+        "
+      >
+        <div className="mx-auto max-w-[950px]">
+          {/* =================================================
+              INTRO / LOCATION CARD
+          ================================================= */}
+          <section
+            className="
+              mb-7
+              rounded-[26px]
+              border
+              border-[#d5ed8d]
+              bg-[#effbd9]
+              p-5
+              sm:p-6
+            "
+          >
+            <div className="flex items-start gap-4">
+              <div
+                className="
+                  flex
+                  h-12
+                  w-12
+                  shrink-0
+                  items-center
+                  justify-center
+                  rounded-2xl
+                  bg-[#B9E92F]
+                  text-xl
+                "
+              >
+                📍
+              </div>
+
+              <div>
+                <p className="m-0 text-sm font-semibold text-[#7e9f10]">
+                  PARTNER DISCOVERY
+                </p>
+
+                <h2 className="mt-1 text-xl font-bold text-[#091928] sm:text-2xl">
+                  Nearby Channel Partners
+                </h2>
+
+                <p className="mt-1 text-sm leading-relaxed text-[#68747b]">
+                  We found suitable partners based on your location and
+                  requirements.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* =================================================
+              PARTNER 1
+          ================================================= */}
+          <PartnerCard
+            number="01"
+            title="Channel Partner 1"
+            address="Address"
+            distance="1.5 KM away"
+            available={true}
+            goTo={goTo}
+          />
+
+          {/* =================================================
+              PARTNER 2
+          ================================================= */}
+          <PartnerCard
+            number="02"
+            title="Channel Partner 2"
+            address="Address"
+            distance="3 KM away"
+            available={false}
+            goTo={goTo}
+          />
+
+          {/* =================================================
+              BOTTOM INFO
+          ================================================= */}
+          <div
+            className="
+              mt-8
+              rounded-[22px]
+              border
+              border-[#d5ed8d]
+              bg-[#effbd9]
+              p-5
+              text-center
+            "
+          >
+            <p className="m-0 text-sm leading-relaxed text-[#52620d]">
+              <span className="font-bold">💡 Tip:</span>{" "}
+              Check the distance and availability before visiting a channel
+              partner.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      {/* =====================================================
+          FOOTER
+      ===================================================== */}
       <Footer />
-    </main>
+    </div>
+  );
+}
+
+/* ============================================================
+   REUSABLE PARTNER CARD
+============================================================ */
+
+function PartnerCard({
+  number,
+  title,
+  address,
+  distance,
+  available,
+  goTo,
+}) {
+  return (
+    <article
+      className="
+        group
+        relative
+        mb-6
+        rounded-[26px]
+        border
+        border-[#e0e6d8]
+        bg-white
+        p-6
+        shadow-[0_8px_25px_rgba(9,25,40,0.07)]
+        transition
+        duration-200
+        hover:-translate-y-1
+        hover:shadow-[0_14px_32px_rgba(9,25,40,0.11)]
+        sm:p-7
+      "
+    >
+      <div className="flex items-start gap-5 max-[600px]:gap-4">
+        {/* =================================================
+            NUMBER
+        ================================================= */}
+        <div
+          className="
+            flex
+            h-12
+            w-12
+            shrink-0
+            items-center
+            justify-center
+            rounded-2xl
+            bg-[#B9E92F]
+            text-sm
+            font-extrabold
+            text-[#091928]
+            sm:h-14
+            sm:w-14
+            sm:text-base
+          "
+        >
+          {number}
+        </div>
+
+        {/* =================================================
+            CONTENT
+        ================================================= */}
+        <div className="min-w-0 flex-1">
+          {/* TITLE */}
+          <div className="pr-10">
+            <span
+              className="
+                inline-block
+                rounded-full
+                border
+                border-[#d5ed8d]
+                bg-[#effbd9]
+                px-3
+                py-1
+                text-[10px]
+                font-bold
+                uppercase
+                tracking-wide
+                text-[#63710d]
+              "
+            >
+              Channel Partner
+            </span>
+
+            <h2
+              className="
+                mt-3
+                text-[20px]
+                font-bold
+                leading-snug
+                text-[#091928]
+                sm:text-[22px]
+              "
+            >
+              {title}
+            </h2>
+
+            <p className="mt-1 text-sm text-[#68747b]">
+              {address}
+            </p>
+          </div>
+
+          {/* =================================================
+              PARTNER DETAILS
+          ================================================= */}
+          <div
+            className="
+              mt-5
+              grid
+              grid-cols-2
+              gap-3
+              max-[500px]:grid-cols-1
+              sm:max-w-[650px]
+              sm:grid-cols-2
+            "
+          >
+            {/* DISTANCE */}
+            <button
+              onClick={() => goTo("#/map")}
+              className="
+                flex
+                items-center
+                justify-center
+                gap-2
+                rounded-xl
+                border
+                border-[#d5d9d3]
+                bg-[#f7f9f3]
+                px-4
+                py-3
+                text-sm
+                font-semibold
+                text-[#091928]
+                transition
+                hover:border-[#B9E92F]
+                hover:bg-[#effbd9]
+                cursor-pointer
+              "
+            >
+              📍 {distance}
+            </button>
+
+            {/* AVAILABILITY */}
+            {available ? (
+              <button
+                onClick={() => alert("Applications are being accepted")}
+                className="
+                  flex
+                  items-center
+                  justify-center
+                  gap-2
+                  rounded-xl
+                  border
+                  border-[#cfe78a]
+                  bg-[#effbd9]
+                  px-4
+                  py-3
+                  text-sm
+                  font-semibold
+                  text-[#64a900]
+                  transition
+                  hover:bg-[#B9E92F]
+                  hover:text-[#091928]
+                  cursor-pointer
+                "
+              >
+                <span className="h-2 w-2 rounded-full bg-[#64a900]" />
+                Accepting Applications
+              </button>
+            ) : (
+              <button
+                onClick={() => alert("Currently unavailable")}
+                className="
+                  flex
+                  items-center
+                  justify-center
+                  gap-2
+                  rounded-xl
+                  border
+                  border-[#f1c9c6]
+                  bg-[#fff5f4]
+                  px-4
+                  py-3
+                  text-sm
+                  font-semibold
+                  text-[#d9342b]
+                  transition
+                  hover:bg-[#ff3b30]
+                  hover:text-white
+                  cursor-pointer
+                "
+              >
+                <span className="h-2 w-2 rounded-full bg-[#ff3b30]" />
+                Currently Unavailable
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* =================================================
+            BOOKMARK
+        ================================================= */}
+        <button
+          onClick={() => alert("Partner saved")}
+          className="
+            absolute
+            right-6
+            top-6
+            flex
+            h-9
+            w-9
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-[#dce3d7]
+            bg-[#f7f9f3]
+            text-lg
+            text-[#68747a]
+            transition
+            hover:border-[#B9E92F]
+            hover:bg-[#effbd9]
+            hover:text-[#091928]
+            cursor-pointer
+          "
+          aria-label={`Bookmark ${title}`}
+        >
+          ♡
+        </button>
+      </div>
+    </article>
   );
 }
