@@ -15,20 +15,14 @@ export default function Navbar() {
     <header className="absolute top-0 left-0 right-0 z-50">
       <div className="max-w-[1380px] mx-auto px-6 lg:px-10 py-5">
         <div className="flex items-center justify-between gap-5">
-
           {/* LOGO */}
           <button
             onClick={() => goTo("#/")}
-            className="flex items-center gap-3 shrink-0"
+            className="flex items-center gap-3 shrink-0 cursor-pointer"
             aria-label="YojnaSetu Home"
           >
             <div className="w-11 h-11 flex items-center justify-center">
-
-              <svg
-                viewBox="0 0 48 48"
-                className="w-10 h-10"
-                fill="none"
-              >
+              <svg viewBox="0 0 48 48" className="w-10 h-10" fill="none">
                 <path
                   d="M24 4L41 13.5V34.5L24 44L7 34.5V13.5L24 4Z"
                   stroke="#B9E92F"
@@ -59,7 +53,6 @@ export default function Navbar() {
                   strokeWidth="1.5"
                 />
               </svg>
-
             </div>
 
             <span className="text-xl font-semibold text-white">
@@ -67,74 +60,63 @@ export default function Navbar() {
             </span>
           </button>
 
-
           {/* NAVIGATION */}
           <nav className="hidden md:flex items-center rounded-full border border-white/70 bg-white/10 backdrop-blur-md p-1">
-
             <button
               onClick={() => goTo("#/")}
-              className="px-6 py-2 rounded-full bg-white/10 text-white text-sm hover:bg-white/20 transition"
+              className="px-6 py-2 rounded-full bg-white/10 text-white text-sm hover:bg-white/20 transition cursor-pointer"
             >
               Home
             </button>
 
             <button
               onClick={() => goTo("#/schemes")}
-              className="px-6 py-2 rounded-full text-white/80 text-sm hover:bg-white/10 hover:text-white transition"
+              className="px-6 py-2 rounded-full text-white/80 text-sm hover:bg-white/10 hover:text-white transition cursor-pointer"
             >
               Search Schemes
             </button>
 
             <button
               onClick={() => goTo("#/emi")}
-              className="px-6 py-2 rounded-full text-white/80 text-sm hover:bg-white/10 hover:text-white transition"
+              className="px-6 py-2 rounded-full text-white/80 text-sm hover:bg-white/10 hover:text-white transition cursor-pointer"
             >
               Calculate EMI
             </button>
 
             <button
               onClick={() => goTo("#/partners")}
-              className="px-6 py-2 rounded-full text-white/80 text-sm hover:bg-white/10 hover:text-white transition"
+              className="px-6 py-2 rounded-full text-white/80 text-sm hover:bg-white/10 hover:text-white transition cursor-pointer"
             >
               Find Partners
             </button>
-
           </nav>
-
 
           {/* RIGHT SIDE */}
           <div className="flex items-center gap-3">
-
             <button
               onClick={handleLanguage}
-              className="hidden sm:flex items-center gap-1 px-2 text-sm text-white hover:text-[#B9E92F] transition"
+              className="hidden sm:flex items-center gap-1 px-2 text-sm text-white hover:text-[#B9E92F] transition cursor-pointer"
               aria-label="Change Language"
             >
               <span className="text-lg">文</span>
 
-              <span className="text-xs">
-                {language}
-              </span>
+              <span className="text-xs">{language}</span>
             </button>
-
 
             <button
               onClick={() => goTo("#/auth")}
-              className="px-5 py-2.5 rounded-full bg-white text-[#091928] text-sm font-semibold hover:bg-[#B9E92F] transition"
+              className="px-5 py-2.5 rounded-full bg-white text-[#091928] text-sm font-semibold hover:bg-[#B9E92F] transition cursor-pointer"
             >
               Sign up
             </button>
 
-
             <button
               onClick={() => goTo("#/auth")}
-              className="px-5 py-2.5 rounded-full border border-white text-white text-sm font-semibold hover:bg-white hover:text-[#091928] transition"
+              className="px-5 py-2.5 rounded-full border border-white text-white text-sm font-semibold hover:bg-white hover:text-[#091928] transition cursor-pointer"
             >
               Log in
             </button>
-
           </div>
-
         </div>
       </div>
     </header>

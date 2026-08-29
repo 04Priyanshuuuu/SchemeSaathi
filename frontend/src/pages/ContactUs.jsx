@@ -25,7 +25,7 @@ export default function ContactUs() {
 
         <button
           onClick={() => go("/home")}
-          className="rounded-[22px] border-0 bg-[#b9e92f] px-5 py-2.5 font-bold text-[#091928]"
+          className="rounded-[22px] border-0 bg-[#b9e92f] px-5 py-2.5 font-bold text-[#091928] cursor-pointer"
         >
           Home
         </button>
@@ -108,7 +108,7 @@ export default function ContactUs() {
 
           <button
             type="submit"
-            className="w-full rounded-[22px] border-0 bg-[#b9e92f] p-3.5 font-extrabold text-[#091928] transition hover:brightness-95"
+            className="w-full rounded-[22px] border-0 bg-[#b9e92f] p-3.5 font-extrabold text-[#091928] transition hover:brightness-95 cursor-pointer"
           >
             Send Message →
           </button>

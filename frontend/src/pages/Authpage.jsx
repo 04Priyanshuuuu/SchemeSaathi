@@ -387,7 +387,7 @@ export default function Auth() {
             <button
               type="button"
               onClick={handleGoogleAuth}
-              className="flex w-full items-center justify-center gap-2 rounded-lg border border-[#091928]/15 bg-white py-2.5 text-sm font-medium text-[#091928] transition-colors hover:bg-[#091928]/5"
+              className="flex w-full items-center justify-center gap-2 rounded-lg border border-[#091928]/15 bg-white py-2.5 text-sm font-medium text-[#091928] transition-colors hover:bg-[#091928]/5 cursor-pointer"
             >
               <svg width="16" height="16" viewBox="0 0 24 24">
                 <path
@@ -460,7 +460,7 @@ export default function Auth() {
               <button
                 type="submit"
                 disabled={signupLoading}
-                className="w-full rounded-lg border-0 bg-[#c8f229] py-2.5 text-sm font-semibold text-[#091928] transition-all hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-50"
+                className="w-full rounded-lg border-0 bg-[#c8f229] py-2.5 text-sm font-semibold text-[#091928] transition-all hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
               >
                 {signupLoading ? "Creating account…" : "Create Account"}
               </button>
@@ -496,7 +496,7 @@ export default function Auth() {
               <button
                 type="submit"
                 disabled={loginLoading}
-                className="w-full rounded-lg border-0 bg-[#c8f229] py-2.5 text-sm font-semibold text-[#091928] transition-all hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-50"
+                className="w-full rounded-lg border-0 bg-[#c8f229] py-2.5 text-sm font-semibold text-[#091928] transition-all hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
               >
                 {loginLoading ? "Logging in…" : "Login"}
               </button>
