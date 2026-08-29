@@ -1,0 +1,501 @@
+/* ============================================================
+   YOJNASETU - RECOMMENDED SCHEMES
+   ============================================================ */
+
+.recommended-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #091928;
+
+  font-family:
+    Inter,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  color: #091928;
+}
+
+
+/* ============================================================
+   MAIN SCHEME SECTION
+   ============================================================ */
+
+.recommended-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 540px;
+
+  padding: 20px 7% 40px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 8%,
+      rgba(255, 255, 255, 0.14) 0,
+      rgba(255, 255, 255, 0.04) 25%,
+      transparent 48%
+    ),
+    linear-gradient(
+      180deg,
+      #091928 0%,
+      #172c3c 28%,
+      #68747a 68%,
+      #e9e9e5 100%
+    );
+}
+
+
+/* ============================================================
+   TOP LOGO + LANGUAGE
+   ============================================================ */
+
+.recommended-top {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.recommended-logo {
+  width: 48px;
+  height: 48px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+.recommended-logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+.recommended-language {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: transform 0.15s ease;
+}
+
+
+.recommended-language:hover {
+  transform: translateY(-1px);
+}
+
+
+.recommended-language span:first-child {
+  border: 1.5px solid #ffffff;
+
+  border-radius: 3px;
+
+  padding: 0 3px;
+
+  font-size: 11px;
+}
+
+
+.recommended-language span:last-child {
+  margin-left: -3px;
+
+  font-size: 12px;
+}
+
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.recommended-title {
+  margin: 20px 0 20px;
+
+  text-align: center;
+
+  color: #B9E92F;
+
+  font-size: clamp(25px, 3vw, 39px);
+
+  line-height: 1.1;
+
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   COMPARE BUTTON
+   ============================================================ */
+
+.compare-wrapper {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  padding-right: 3%;
+}
+
+
+.compare-button {
+  min-width: 125px;
+
+  height: 31px;
+
+  padding: 0 16px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  color: #24323c;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+
+.compare-button:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ============================================================
+   SCHEME CARDS
+   ============================================================ */
+
+.scheme-result-card {
+  position: relative;
+
+  width: min(900px, 88%);
+
+  min-height: 110px;
+
+  margin: 16px auto 0;
+
+  padding: 13px 42px 10px 14px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  border-radius: 11px;
+
+  background: #edf9d4;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+
+.scheme-result-card:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.13);
+}
+
+
+/* ============================================================
+   NUMBER
+   ============================================================ */
+
+.scheme-number {
+  flex-shrink: 0;
+
+  font-size: 25px;
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  color: #30383d;
+
+  padding-top: 1px;
+}
+
+
+/* ============================================================
+   CARD CONTENT
+   ============================================================ */
+
+.scheme-result-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.scheme-result-content h2 {
+  margin: 0 0 3px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  color: #18242b;
+}
+
+
+.scheme-result-content p {
+  margin: 0;
+
+  font-size: 9px;
+
+  line-height: 1.3;
+
+  color: #28343b;
+}
+
+
+/* ============================================================
+   ACTION BUTTONS
+   ============================================================ */
+
+.scheme-actions {
+  margin-top: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 36px;
+}
+
+
+.scheme-emi-button,
+.scheme-partner-button {
+  height: 23px;
+
+  border: none;
+
+  border-radius: 15px;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease;
+}
+
+
+.scheme-emi-button:hover,
+.scheme-partner-button:hover {
+  transform: translateY(-1px);
+
+  filter: brightness(1.04);
+}
+
+
+.scheme-emi-button {
+  width: 105px;
+
+  background: #091928;
+
+  color: #ffffff;
+}
+
+
+.scheme-partner-button {
+  width: 245px;
+
+  background: #B9E92F;
+
+  color: #091928;
+}
+
+
+/* ============================================================
+   BOOKMARK
+   ============================================================ */
+
+.bookmark-button {
+  position: absolute;
+
+  top: 10px;
+
+  right: 17px;
+
+  width: 20px;
+  height: 25px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #68747a;
+
+  font-size: 22px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transform: rotate(180deg);
+
+  transition:
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+
+.bookmark-button:hover {
+  color: #091928;
+
+  transform: rotate(180deg) scale(1.08);
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 800px) {
+
+  .recommended-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+
+  .scheme-result-card {
+    width: 92%;
+  }
+
+
+  .scheme-actions {
+    gap: 20px;
+  }
+
+
+  .scheme-partner-button {
+    width: 210px;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+  .recommended-section {
+    min-height: auto;
+
+    padding: 15px 15px 35px;
+  }
+
+
+  .recommended-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .recommended-title {
+    margin-top: 18px;
+
+    font-size: 26px;
+  }
+
+
+  .compare-wrapper {
+    padding-right: 2%;
+  }
+
+
+  .compare-button {
+    min-width: 110px;
+
+    height: 28px;
+
+    font-size: 9px;
+  }
+
+
+  .scheme-result-card {
+    width: 100%;
+
+    min-height: 115px;
+
+    padding-right: 38px;
+  }
+
+
+  .scheme-number {
+    font-size: 22px;
+  }
+
+
+  .scheme-actions {
+    gap: 10px;
+
+    flex-wrap: wrap;
+  }
+
+
+  .scheme-emi-button {
+    width: 100px;
+  }
+
+
+  .scheme-partner-button {
+    width: 190px;
+  }
+
+}

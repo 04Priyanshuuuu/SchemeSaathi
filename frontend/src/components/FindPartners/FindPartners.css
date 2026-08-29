@@ -1,0 +1,487 @@
+/* ============================================================
+   YOJNASETU - FIND PARTNERS
+   ============================================================ */
+
+.partner-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #091928;
+
+  font-family:
+    Inter,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  color: #091928;
+}
+
+
+/* ============================================================
+   MAIN SECTION
+   ============================================================ */
+
+.partner-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 545px;
+
+  padding: 18px 7% 42px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 10%,
+      rgba(255, 255, 255, 0.13) 0,
+      rgba(255, 255, 255, 0.04) 25%,
+      transparent 48%
+    ),
+    linear-gradient(
+      180deg,
+      #091928 0%,
+      #132a3b 30%,
+      #69747a 72%,
+      #e9e9e5 100%
+    );
+}
+
+
+/* ============================================================
+   TOP LOGO
+   ============================================================ */
+
+.partner-top {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+.partner-logo {
+  width: 48px;
+  height: 48px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+.partner-logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* ============================================================
+   LANGUAGE
+   ============================================================ */
+
+.partner-language {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition: transform 0.15s ease;
+}
+
+
+.partner-language:hover {
+  transform: translateY(-1px);
+}
+
+
+.partner-language span:first-child {
+  border: 1.5px solid #ffffff;
+
+  border-radius: 3px;
+
+  padding: 0 3px;
+
+  font-size: 10px;
+}
+
+
+.partner-language span:last-child {
+  margin-left: -3px;
+
+  font-size: 12px;
+}
+
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.partner-title {
+  margin: 18px auto 40px;
+
+  text-align: center;
+
+  color: #B9E92F;
+
+  font-size: clamp(22px, 2.6vw, 35px);
+
+  line-height: 1.15;
+
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   PARTNER CARD
+   ============================================================ */
+
+.partner-card {
+  position: relative;
+
+  width: min(900px, 88%);
+
+  min-height: 95px;
+
+  margin: 0 auto 22px;
+
+  padding: 13px 43px 11px 14px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  border-radius: 10px;
+
+  background: #edf9d4;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+
+.partner-card:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.14);
+}
+
+
+/* ============================================================
+   NUMBER
+   ============================================================ */
+
+.partner-number {
+  flex-shrink: 0;
+
+  font-size: 25px;
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  color: #30383d;
+
+  padding-top: 1px;
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.partner-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.partner-content h2 {
+  margin: 0 0 2px;
+
+  font-size: 13px;
+
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  color: #18242b;
+}
+
+
+.partner-content p {
+  margin: 0;
+
+  font-size: 9px;
+
+  line-height: 1.3;
+
+  color: #28343b;
+}
+
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+
+.partner-actions {
+  margin-top: 8px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 50px;
+}
+
+
+/* DISTANCE */
+
+.partner-distance {
+  width: 102px;
+
+  height: 22px;
+
+  border: 1px solid #091928;
+
+  border-radius: 14px;
+
+  background: transparent;
+
+  color: #091928;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+
+.partner-distance:hover {
+  background: #091928;
+
+  color: #ffffff;
+}
+
+
+/* AVAILABILITY */
+
+.partner-availability {
+  width: 152px;
+
+  height: 22px;
+
+  border: 1px solid #091928;
+
+  border-radius: 14px;
+
+  background: transparent;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+
+/* AVAILABLE */
+
+.partner-available {
+  color: #64a900;
+}
+
+
+.partner-available:hover {
+  background: #B9E92F;
+
+  color: #091928;
+}
+
+
+/* UNAVAILABLE */
+
+.partner-unavailable {
+  color: #ff3b30;
+}
+
+
+.partner-unavailable:hover {
+  background: #ff3b30;
+
+  color: #ffffff;
+}
+
+
+/* ============================================================
+   BOOKMARK
+   ============================================================ */
+
+.partner-bookmark {
+  position: absolute;
+
+  top: 10px;
+
+  right: 17px;
+
+  width: 20px;
+
+  height: 25px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #68747a;
+
+  font-size: 21px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transform: rotate(180deg);
+
+  transition:
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+
+.partner-bookmark:hover {
+  color: #091928;
+
+  transform: rotate(180deg) scale(1.08);
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 800px) {
+
+  .partner-section {
+    padding-left: 5%;
+
+    padding-right: 5%;
+  }
+
+
+  .partner-card {
+    width: 92%;
+  }
+
+
+  .partner-actions {
+    gap: 25px;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+  .partner-section {
+    min-height: auto;
+
+    padding: 15px 15px 35px;
+  }
+
+
+  .partner-logo {
+    width: 40px;
+
+    height: 40px;
+  }
+
+
+  .partner-title {
+    margin-top: 18px;
+
+    margin-bottom: 30px;
+
+    font-size: 24px;
+  }
+
+
+  .partner-card {
+    width: 100%;
+
+    min-height: 105px;
+
+    margin-bottom: 18px;
+
+    padding-right: 38px;
+  }
+
+
+  .partner-number {
+    font-size: 22px;
+  }
+
+
+  .partner-actions {
+    gap: 10px;
+
+    flex-wrap: wrap;
+  }
+
+
+  .partner-distance {
+    width: 100px;
+  }
+
+
+  .partner-availability {
+    width: 150px;
+  }
+
+}

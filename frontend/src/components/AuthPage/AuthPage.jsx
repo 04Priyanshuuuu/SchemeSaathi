@@ -114,7 +114,9 @@ function BrandPanel() {
 
       <div className="brand-panel__content">
         <h1 className="brand-panel__heading">
-          Welcome to <span className="brand-panel__heading-accent">SchemeSaathi</span>
+          Welcome to <span className="brand-panel__heading-accent">
+  YojnaSetu
+</span>
           <br />
           Create Excellence
           <br />

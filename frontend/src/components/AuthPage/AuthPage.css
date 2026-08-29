@@ -1,5 +1,5 @@
 /* ============================================================
-   YojnaSetu / SchemeSaathi — Auth Page Styles
+  YojnaSetu — Auth Page Styles
    Brand colors used throughout:
    - Navy (primary dark)   : #091928
    - Lime (accent)         : #c8f229
@@ -29,7 +29,8 @@
   gap: 28px;
   width: 50%;
   overflow: hidden;
-  background-color: #091928; /* fallback color while the image loads / if it's missing */
+  background-color: #091928;
+  /* fallback color while the image loads / if it's missing */
   /* Put your real asset in /public (e.g. public/brand-bg.jpg) and update
      this path — for a Vite project, anything in /public is served from
      the site root, so "/brand-bg.jpg" resolves to public/brand-bg.jpg */
@@ -303,6 +304,7 @@
   .brand-panel {
     display: none;
   }
+
   .form-panel {
     width: 100%;
   }

@@ -15,7 +15,7 @@ app.use(passport.initialize());
 app.get("/", (req, res) => {
   res.json({
     success: true,
-    message: "SchemeSaathi Backend is running",
+    message: "YojnaSetu Backend is running",
   });
 });
 
